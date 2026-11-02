@@ -1,0 +1,267 @@
+/* GLOBAL COLORS */
+:root {
+    --text: #f2f2f7;
+    --background: #101017;
+    --primary: #7657e8;
+    --secondary: #25243b;
+    --accent: #45b8ff;
+}
+
+/* GENERAL STYLING */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+header {
+    background-color: var(--secondary);
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    color: var(--accent);
+}
+
+.logo p {
+    margin: 5px 0 0;
+}
+
+.social-links a {
+    color: var(--text);
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--secondary);
+}
+
+/* GAME BANNER */
+.hero {
+    min-height: 300px;
+    background: linear-gradient(135deg,
+            var(--secondary),
+            var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* WELCOME SECTION */
+.welcome {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.game-image {
+    width: 200px;
+    min-height: 200px;
+    background-color: var(--secondary);
+    border: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+/* LATEST NEWS */
+.news {
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.news h2 {
+    margin-top: 0;
+}
+
+.news-item {
+    border-bottom: 1px solid #555;
+    padding: 10px 0;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h3 {
+    margin-bottom: 5px;
+}
+
+/* FEATURE CARDS */
+.features {
+    padding-bottom: 50px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: var(--secondary);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.feature-image {
+    height: 120px;
+    background-color: #393850;
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: var(--accent);
+}
+
+.feature-card a {
+    color: var(--text);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--secondary);
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--text);
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 800px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome {
+        flex-direction: column;
+    }
+
+    .game-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}
